@@ -50,9 +50,13 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
 
-
+#package installing permissions
 alias apt-get="sudo apt-get"
 
+#git shortcuts
+alias ga="git add"
+alias gc="git commit -m"
+alias gp="git push origin master"
 
 #immediately cd into newly created directory
 function mkdircd () {
