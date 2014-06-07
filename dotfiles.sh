@@ -1,3 +1,5 @@
+#this script allows me to easily install my dotfiles on any machine i use, symlinking them into root and storing away existing dotfiles
+
 echo "Have you already cloned the desired dotfiles into the directory ~/dotfiles on this machine?"
 select yn in "Yes" "No"; do
     case $yn in
@@ -16,6 +18,7 @@ select yn in "Yes" "No"; do
 			for file in $files; do
 				ln -s ~/dotfiles/$file ~/.$file
 			done
+            ;;
         No )
 			echo "Please do that first and then run this script."
 			exit
