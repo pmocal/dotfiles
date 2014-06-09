@@ -22,6 +22,12 @@ fi
 
 #MY ADDITIONS
 
+#apply .bashrc
+alias src="source ~/.bashrc"
+
+#directory shortcuts
+export MUSIC=/Users/parthivm/Music/iTunes/iTunes\ Media/Music #MUST BE QUOTED DUE TO SPACES I.E. 'cd "$MUSIC"'
+
 #quick directory navigation
 alias ..="cd .."
 alias ...="cd ../.."
@@ -57,6 +63,12 @@ alias apt-get="sudo apt-get"
 alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push origin master"
+
+#homebrew
+alias bi="brew install"
+
+#display all music files in current directory
+alias music="ls | egrep '.*\.(mp3|wav|mp4|aac)'" #piping ls into grep with extended regex
 
 #immediately cd into newly created directory
 function mkdircd () {
