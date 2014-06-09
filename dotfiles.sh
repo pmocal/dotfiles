@@ -10,7 +10,8 @@ select yn in "Yes" "No"; do
 			cd ~
 			mkdir ~/olddotfiles
 			for file in $files; do
-				mv ~/.$file ~/olddotfiles/$file
+				mv ~/.$file ~/olddotfiles/
+                mv ~/olddotfiles/.$file ~/olddotfiles/$file
 			done
 
 			echo "Symlinking new dotfiles, located in ~/dotfiles, to files with leading dot in root"
@@ -18,6 +19,10 @@ select yn in "Yes" "No"; do
 			for file in $files; do
 				ln -s ~/dotfiles/$file ~/.$file
 			done
+
+            source ~/.bashrc
+            source ~/.bash_profile
+
             ;;
         No )
 			echo "Please do that first and then run this script."
